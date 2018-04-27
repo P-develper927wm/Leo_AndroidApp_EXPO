@@ -21,7 +21,7 @@ import {orExp} from '../lib/lib'
 //     text.length > 60 ? 20 : 30
 
 const calcFontSize  = text =>
-    30 - (1 - Math.min(60/text.length, 1))*15
+    28 - (1 - Math.min(60/text.length, 1))*17
 
 
 export default QuestionView = ({question,toggleFavoriteQuestion,remove,skip,isFavorite,skips}) =>
@@ -31,9 +31,10 @@ export default QuestionView = ({question,toggleFavoriteQuestion,remove,skip,isFa
 
             <Text style={[{
                 color: orExp(question.card) ? '#8CF5E7' : '#4F9188',
-                fontSize: 18//calcFontSize(question.card)
+                fontSize: calcFontSize(question.card)
             },  styles.expTextView, ]}
-            numberOfLines={10}
+            // numberOfLines={10}
+            // ellipsizeMode={'clip'}
             >
 
                 {question.card.split(' or ')[0]}
