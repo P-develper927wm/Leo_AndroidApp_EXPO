@@ -313,9 +313,9 @@ export default class App extends React.Component {
                 //index={3}
 
             >
-                {/* <Image
+                <Image
                     source={this.intro}
-                    style={styles.backgroundImage}/> */}
+                    style={styles.backgroundImage}/>
 
                 {this.state.renderRules && this.state.fontLoaded && this.ruleContainer()}
 
